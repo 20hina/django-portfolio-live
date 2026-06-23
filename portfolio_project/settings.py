@@ -15,13 +15,14 @@ SECRET_KEY = os.environ.get(
     'fallback-secret-key-for-local'
 )
 
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '.railway.app',
     '.up.railway.app',
+    '.netlify.app',
 ]
 
 # ─── INSTALLED APPS ──────────────────────────────────────────────
@@ -32,7 +33,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Portfolio Apps
     'main',
+    'bio',
+    'education',
+    'skills',
+    'experience',
+    'projects',
 ]
 
 # ─── MIDDLEWARE ───────────────────────────────────────────────────
@@ -72,7 +80,6 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 if DATABASE_URL:
-    # Production — PostgreSQL on Railway
     DATABASES = {
         'default': dj_database_url.config(
             default=DATABASE_URL,
@@ -80,7 +87,6 @@ if DATABASE_URL:
         )
     }
 else:
-    # Local — SQLite
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -107,7 +113,6 @@ STATIC_URL       = '/static/'
 STATIC_ROOT      = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
-# WhiteNoise serves static files in production
 STATICFILES_STORAGE = (
     'whitenoise.storage.CompressedManifestStaticFilesStorage'
 )

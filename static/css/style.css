@@ -1150,3 +1150,239 @@ img { max-width: 100%; display: block; }
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b800;
 }
+/* ─── MOBILE FIXES ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* Fix body overflow */
+    body {
+        overflow-x: hidden;
+        width     : 100%;
+    }
+
+    /* Fix navbar */
+    .navbar {
+        width        : 95% !important;
+        margin       : 12px auto 40px !important;
+        padding      : 10px 15px !important;
+        border-radius: 50px !important;
+    }
+
+    /* Fix hero section */
+    .hero {
+        padding  : 20px 16px 60px !important;
+        max-width: 100% !important;
+    }
+
+    .hero-title {
+        font-size     : 2.2rem !important;
+        letter-spacing: -0.02em !important;
+    }
+
+    .title-line-1 {
+        flex-wrap: wrap !important;
+        gap      : 8px !important;
+    }
+
+    .inline-avatar {
+        width : 50px !important;
+        height: 50px !important;
+    }
+
+    /* Fix hero buttons */
+    .hero-buttons {
+        flex-direction: column !important;
+        align-items   : center !important;
+        gap           : 12px !important;
+        width         : 100% !important;
+    }
+
+    .btn-black-yellow,
+    .btn-contact-outline {
+        width          : 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Fix hero footer */
+    .hero-footer {
+        flex-direction: column !important;
+        align-items   : center !important;
+        padding       : 0 !important;
+        gap           : 20px !important;
+    }
+
+    /* Fix social pills */
+    .social-pills {
+        justify-content: center !important;
+    }
+
+    .social-pill {
+        padding: 8px 16px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Fix about section */
+    .about-section {
+        margin : 0 16px 60px !important;
+        padding: 40px 20px !important;
+        width  : auto !important;
+    }
+
+    .about-bg-text {
+        font-size: 6rem !important;
+    }
+
+    .about-cards-container {
+        grid-template-columns: 1fr !important;
+        gap                  : 16px !important;
+    }
+
+    .about-inner-card {
+        padding: 20px !important;
+    }
+
+    /* Fix five avatars */
+    .five-avatars img {
+        width      : 60px !important;
+        height     : 60px !important;
+        margin-left: -12px !important;
+    }
+
+    /* Fix marquee */
+    .marquee-wrapper {
+        margin-left: 0 !important;
+        width      : 100% !important;
+    }
+
+    /* Fix skills section */
+    .skills-section {
+        padding      : 0 16px !important;
+        margin-bottom: 60px !important;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .section-header {
+        flex-direction: column !important;
+        align-items   : flex-start !important;
+        gap           : 16px !important;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem !important;
+    }
+
+    /* Fix projects section */
+    .projects-section {
+        padding      : 0 16px !important;
+        margin-bottom: 60px !important;
+    }
+
+    .projects-grid {
+        height        : auto !important;
+        flex-direction: column !important;
+        gap           : 30px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .project-card {
+        position : relative !important;
+        left     : auto !important;
+        right    : auto !important;
+        transform: none !important;
+        width    : 100% !important;
+        height   : 220px !important;
+    }
+
+    /* Fix process/experience/education */
+    .process-section {
+        padding      : 0 16px !important;
+        margin-bottom: 60px !important;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr !important;
+        gap                  : 24px !important;
+    }
+
+    .step-connector {
+        display: none !important;
+    }
+
+    .step-circle {
+        width : 80px !important;
+        height: 80px !important;
+    }
+
+    /* Fix contact section */
+    .contact-section {
+        padding      : 0 16px !important;
+        margin-bottom: 60px !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap                  : 30px !important;
+    }
+
+    .contact-form-wrapper {
+        padding: 24px 16px !important;
+    }
+
+    /* Fix footer */
+    .footer-wrapper {
+        padding: 0 !important;
+    }
+
+    .footer-section {
+        padding      : 40px 20px 20px !important;
+        border-radius: 24px 24px 0 0 !important;
+    }
+
+    .footer-top {
+        flex-direction: column !important;
+        gap           : 24px !important;
+    }
+
+    .footer-cta h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        gap           : 16px !important;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap !important;
+        gap      : 12px !important;
+    }
+
+    .footer-copyright {
+        flex-direction: column !important;
+        gap           : 8px !important;
+    }
+}
+
+/* ─── EXTRA SMALL SCREENS ────────────────────────────────────── */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 1.8rem !important;
+    }
+
+    .navbar {
+        width  : 98% !important;
+        padding: 8px 12px !important;
+    }
+
+    .social-pill {
+        padding  : 6px 12px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .about-section {
+        margin : 0 8px 40px !important;
+        padding: 30px 16px !important;
+    }
+}
