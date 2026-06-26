@@ -130,3 +130,7 @@ MESSAGE_TAGS = {
 
 # ─── DEFAULT AUTO FIELD ──────────────────────────────────────────
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# ─── LOGIN URL ───────────────────────────────────────────────────
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'portfolio'
+LOGOUT_REDIRECT_URL = 'login'

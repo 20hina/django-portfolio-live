@@ -1,14 +1,27 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
+    user        = models.OneToOneField(
+                    User,
+                    on_delete=models.CASCADE,
+                    related_name='profile',
+                    null=True,
+                    blank=True
+                  )
     name        = models.CharField(max_length=100)
     tagline     = models.CharField(max_length=200)
     about       = models.TextField()
-    profile_img = models.ImageField(upload_to='profile/')
+    profile_img = models.ImageField(
+                    upload_to='profile/',
+                    blank=True,
+                    null=True
+                  )
     cv          = models.FileField(
                     upload_to='cv/',
-                    blank=True
+                    blank=True,
+                    null=True
                   )
     email       = models.EmailField()
     phone       = models.CharField(max_length=20, blank=True)

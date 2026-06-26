@@ -1,7 +1,16 @@
 from django.db import models
+from bio.models import Profile
 
 
 class Education(models.Model):
+    # Link education to a specific profile
+    profile     = models.ForeignKey(
+                    Profile,
+                    on_delete=models.CASCADE,
+                    related_name='educations',
+                    null=True,
+                    blank=True
+                  )
     degree      = models.CharField(max_length=200)
     institution = models.CharField(max_length=200)
     year        = models.CharField(max_length=100)

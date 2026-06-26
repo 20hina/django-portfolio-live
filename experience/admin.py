@@ -4,4 +4,4 @@ from .models import Experience
 
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
-    list_display = ['role', 'company', 'duration', 'order']
+    list_display = ['role', 'company', 'duration']

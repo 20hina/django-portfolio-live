@@ -4,4 +4,4 @@ from .models import Education
 
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ['degree', 'institution', 'year', 'order']
+    list_display = ['degree', 'institution', 'year']

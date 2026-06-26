@@ -61,12 +61,17 @@
         </ul>
 
         <div class="nav-actions">
-            {% if profile.cv %}
-            <a href="{{ profile.cv.url }}" class="btn-resume" download>
-                <i class="fas fa-download"></i> Resume
-            </a>
-            {% endif %}
-            <a href="#contact" class="btn-contact">Hire Me</a>
+           <div class="nav-actions">
+    {% if profile.cv %}
+    <a href="{{ profile.cv.url }}"
+       class="btn-resume" download>
+        <i class="fas fa-download"></i> Resume
+    </a>
+    {% endif %}
+    <a href="{% url 'logout' %}" class="btn-contact">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+</div>
         </div>
 
         <!-- Hamburger for mobile -->
