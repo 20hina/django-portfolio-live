@@ -25,6 +25,11 @@ ALLOWED_HOSTS = [
     '.netlify.app',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.up.railway.app',
+    'https://*.railway.app',
+]
+
 # ─── INSTALLED APPS ──────────────────────────────────────────────
 INSTALLED_APPS = [
     'django.contrib.admin',
