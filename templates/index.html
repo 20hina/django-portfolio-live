@@ -51,14 +51,23 @@
             {{ profile.name }}
         </div>
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ul class="nav-links" id="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <!-- Logout in mobile menu -->
+    <li class="mobile-logout">
+        <a href="{% url 'logout' %}"
+           style="color: #FACC15 !important;
+                  font-weight: 600;">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+        </a>
+    </li>
+</ul>
 
         <div class="nav-actions">
            <div class="nav-actions">
